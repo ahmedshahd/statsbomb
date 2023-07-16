@@ -1,0 +1,110 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0em;
+    grid-auto-flow: row;
+    grid-template-areas: "Logo rightNav";
+    height: 8%;
+    padding: 20px 75px;
+    background:#f8f8f8
+  }
+  
+  .Logo {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    justify-content: start;
+    align-content: center;
+    justify-items: start;
+    align-items: center;
+    grid-template-areas: ".";
+    grid-area: Logo;
+
+  }
+
+  .logoImage{
+    display: grid;
+
+  }
+
+ 
+  
+  
+  .rightNav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 10px;
+    grid-auto-flow: row;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: "who-we-are what-we-do who-we-help search english login contactUs";
+    grid-area: rightNav;
+  }
+  
+  .who-we-are {
+    grid-area: who-we-are;
+    cursor: pointer;
+
+  }
+  
+  .what-we-do {
+    grid-area: what-we-do;
+    cursor: pointer;
+
+  }
+  
+  .who-we-help {
+    grid-area: who-we-help;
+    cursor: pointer;
+
+  }
+  
+  .search {
+    grid-area: search;
+    cursor: pointer;
+
+  }
+  
+  .english {
+    grid-area: english;
+    cursor: pointer;
+
+  }
+  
+  .login {
+    grid-area: login;
+    cursor: pointer;
+
+  }
+  
+  .contactUs{
+    grid-area: contactUs;
+    cursor: pointer;
+
+  }
+
+  .contactUsBtn {
+    width: 140px;
+    height: 46px;
+    color: #ffffff;
+    background: #e40b27;
+    border: 1px solid #e40b27;
+    transition: all 0.3s;
+    cursor: pointer;
+    text-align: center;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+  .contactUsBtn:hover {
+    background: #ffffff;
+    color: #e40b27;
+    border: 1px solid #e40b27;
+  }
+  
