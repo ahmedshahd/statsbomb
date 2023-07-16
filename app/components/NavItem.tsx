@@ -1,5 +1,4 @@
-import Link from "next/link";
-
+import Link from 'next/link';
 
 interface NavItemProps {
   text: string;
@@ -7,11 +6,7 @@ interface NavItemProps {
 }
 
 const NavItem: React.FC<NavItemProps> = ({ text, href }) => {
-  return (
-    <Link href={href} >
-        {text}
-    </Link>
-  );
+  return <Link href={href}>{text}</Link>;
 };
 
 export default NavItem;

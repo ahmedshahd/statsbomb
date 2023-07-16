@@ -1,21 +1,18 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
-import NavItem from "./NavItem";
-import Logo from "../../public/logo.svg";
-// import Search from "./search";
-import styles from "../styles/NavBar.module.css";
-import { Img, Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
-import { SearchIcon } from "@chakra-ui/icons";
-import Search from "./search";
+import Link from 'next/link';
+import Image from 'next/image';
+import React, { useEffect, useRef, useState } from 'react';
+import NavItem from './NavItem';
+import Logo from '../../public/logo.svg';
+import Search from './search';
 
 const MENU_LIST = [
-  { text: "Who We Are", href: "/who-we-are", gridClass: "who-we-are" },
-  { text: "Who We Help", href: "/who-we-help", gridClass: "who-we-help" },
-  { text: "What We Do", href: "/what-we-do", gridClass: "what-we-do" },
+  { text: 'Who We Are', href: '/who-we-are', gridClass: 'who-we-are' },
+  { text: 'Who We Help', href: '/who-we-help', gridClass: 'who-we-help' },
+  { text: 'What We Do', href: '/what-we-do', gridClass: 'what-we-do' },
 ];
+
 const Navbar = () => {
   const [showInput, setShowInput] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
@@ -30,9 +27,9 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    document.addEventListener("click", handleDocumentClick);
+    document.addEventListener('click', handleDocumentClick);
     return () => {
-      document.removeEventListener("click", handleDocumentClick);
+      document.removeEventListener('click', handleDocumentClick);
     };
   }, []);
 
@@ -59,7 +56,7 @@ const Navbar = () => {
     //         ref={formRef}
     //         role="search"
     //         method="get"
-    //         className={styles.form}
+    //         className='form'}
     //       >
     //         <div onClick={handleSearchButtonClick}>
     //           <SearchIcon
@@ -83,41 +80,33 @@ const Navbar = () => {
     //   </nav>
     // </header>
 
-    <div className={styles.container}>
-      <div className={styles.logo}>
-        <Link href={"/"}>
+    <div className="container">
+      <div className="logo">
+        <Link href="/">
           <Image alt="StatsBomb Logo" src={Logo}></Image>
         </Link>
       </div>
-      <div className={styles.rightNav}>
+      <div className="rightNav">
         {MENU_LIST.map((menu, idx) => (
           <div key={menu.text} className={menu.gridClass}>
             <NavItem {...menu} />
           </div>
         ))}
-        <div className={styles.search}>
-          <form
-            ref={formRef}
-            role="search"
-            method="get"
-            className={styles.form}
-          >
-             <div onClick={handleSearchButtonClick}>
+        <div className="search">
+          <form ref={formRef} role="search" method="get" className="form">
+            <div onClick={handleSearchButtonClick}>
               {/* <SearchIcon
               
               /> */}
-              <Search/>
-
+              <Search />
             </div>
-            {showInput && (
-              <input/>
-            )}
+            {showInput && <input />}
           </form>
         </div>
-        <div className={styles.english}>English</div>
-        <div className={styles.login}>Login</div>
-        <div className={styles.contactUs}>
-          <a className={styles.contactUsBtn}>Contact Us</a>
+        <div className="english">English</div>
+        <div className="login">Login</div>
+        <div className="contactUs">
+          <a className="contactUsBtn">Contact Us</a>
         </div>
       </div>
     </div>
