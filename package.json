@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "storybook": "storybook dev -p 6006 -s ./public",
+    "build-storybook": "storybook build -s public"
   },
   "dependencies": {
     "next": "13.4.9",
@@ -14,14 +16,26 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.22.9",
+    "@storybook/addon-actions": "^7.0.27",
+    "@storybook/addon-essentials": "^7.0.27",
+    "@storybook/addon-interactions": "^7.0.27",
+    "@storybook/addon-links": "^7.0.27",
+    "@storybook/cli": "^7.0.27",
+    "@storybook/nextjs": "^7.0.27",
+    "@storybook/react": "^7.0.27",
+    "@storybook/testing-library": "^0.2.0",
     "@types/node": "20.4.2",
     "@types/react": "18.2.15",
     "@types/react-dom": "18.2.7",
+    "babel-loader": "^8.3.0",
     "eslint": "8.44.0",
     "eslint-config-next": "13.4.9",
     "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-storybook": "^0.6.12",
     "prettier": "^3.0.0",
     "sass": "^1.63.6",
+    "storybook": "^7.0.27",
     "typescript": "5.1.6"
   }
 }
