@@ -13,15 +13,15 @@ export default {
 
 const Template: StoryFn<typeof Button> = (args) => <Button {...args} />;
 
-export const Primary = Template.bind({});
+export const red = Template.bind({});
 
-Primary.args = {
-  primary: true,
+red.args = {
+  red: true,
   label: 'Button',
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
+export const grey = Template.bind({});
+grey.args = {
   label: 'Button',
 };
 

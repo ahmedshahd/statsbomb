@@ -4,7 +4,7 @@ type ButtonProps = {
   /**
    * Is this the principal call to action on the page?
    */
-  primary?: boolean;
+  red?: boolean;
   /**
    * What background color to use
    */
@@ -27,13 +27,13 @@ type ButtonProps = {
  * Primary UI component for user interaction
  */
 export const Button = ({
-  primary = false,
+  red = false,
   size = 'medium',
   backgroundColor,
   label,
   ...props
 }: ButtonProps) => {
-  const mode = primary ? 'button--primary' : 'button--secondary';
+  const mode = red ? 'button--red' : 'button--grey';
   return (
     <button
       type="button"
