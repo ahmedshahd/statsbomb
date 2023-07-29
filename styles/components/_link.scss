@@ -3,12 +3,17 @@
   font-weight: 700;
   border: 0;
   cursor: pointer;
-  display: inline-block;
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: space-between;
   line-height: 1;
   outline: none;
   text-decoration: none;
   text-align: center;
-
+  letter-spacing: -0.38px;
+  svg {
+    margin-top: 5px;
+  }
 }
 
 .link--red {
@@ -17,17 +22,21 @@
   border: 1px solid #e40b27;
 }
 
-.link--red:hover {
+.link:hover {
   background: transparent;
   color: #e40b27;
-  transition: background-position 0.9s;
+  svg path {
+    stroke: #e40b27;
+  }
 }
 
 .link--grey {
   background: #f2f2f2;
   color: #e40b27;
   border: 1px solid #f2f2f2;
-  transition: background-position 0.9s;
+  svg path {
+    stroke: #e40b27;
+  }
 }
 
 .link--grey:hover {
@@ -47,6 +56,9 @@
 }
 
 .link--large {
-  font-size: 16px;
-  padding: 12px 24px;
+  font-size: 18px;
+  padding: 5px;
+  width: 223px;
+  height: 53px;
+  font-weight: 500;
 }
