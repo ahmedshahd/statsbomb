@@ -7,8 +7,9 @@
   line-height: 1;
 }
 
+
 .button--red {
-  color: white;
+  color: #ffff;
   background: #e40b27;
   border: 1px solid #e40b27;
 }
@@ -16,23 +17,45 @@
 .button--red:hover {
   background: transparent;
   color: #e40b27;
-  transition: background-position 0.9s;
-
+  transition: background-position 0.3s;
 }
 
 .button--grey {
   background: #f2f2f2;
   color: #e40b27;
   border: 1px solid #f2f2f2;
-  transition: background-position 0.9s;
-
+  transition: background-position 0.3s;
 }
 
 .button--grey:hover {
   border: 1px solid #e40b27;
-  background: white;
+  background: #ffff;
   background-position: top;
+}
 
+
+.button--white {
+  background: #ffffff;
+  color: #e40b27;
+  border: #ffffff
+}
+
+.button--white:hover {
+  border: 1px solid #e40b27;
+}
+
+.button--left-arrow {
+  height: 50px;
+  width: 50px;
+  // background-image: url("../../public/left-arrow.svg")
+  background: no-repeat url('../../public/left-arrow.png');
+}
+
+.button--right-arrow {
+  height: 50px;
+  width: 50px;
+  // background-image: url("../../public/right-arrow.svg")
+  background: no-repeat url('../../public/right-arrow.png');
 }
 
 .button--small {
