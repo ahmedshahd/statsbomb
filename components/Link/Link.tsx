@@ -3,22 +3,12 @@ import React from 'react';
 import { convertToValidUrlPath } from '../utils';
 
 type LinkProps = {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  red?: boolean;
-  /**
-   * What background color to use
-   */
-  backgroundColor?: string;
-  /**
-   * How large should the link be?
-   */
-  size?: 'small' | 'medium' | 'large';
-  /**
-   * link contents
-   */
+
+
+  varient: 'primary' | 'secondary' | 'tertiary';
+
   label: string;
+ 
   /**
    * Optional click handler
    */
@@ -28,28 +18,16 @@ type LinkProps = {
 /**
  * Primary UI component for user interaction
  */
-export const Link = ({
-  red = false,
-  size = 'medium',
-  backgroundColor,
-  label,
-  ...props
-}: LinkProps) => {
-  const mode = red ? 'link--red' : 'link--grey';
+export const Link = ({varient,label, ...props }: LinkProps) => {
   return (
     <a
-      className={['link', `link--${size}`, mode].join(' ')}
-      style={{ backgroundColor }}
+      className={`link link--${varient}`}
+
       href={convertToValidUrlPath(label)}
       {...props}
     >
       {label}
-      <svg
-        width="16"
-        height="14"
-        viewBox="0 0 16 14"
-        fill="none"
-      >
+      <svg width="16" height="14" viewBox="0 0 16 14" fill="none">
         <path
           d="M13.4844 6.93945L1.48438 6.93945"
           stroke="white"

@@ -13,26 +13,14 @@ export default {
 
 const Template: StoryFn<typeof Link> = (args) => <Link {...args} />;
 
-export const red = Template.bind({});
-
-red.args = {
-  red: true,
+export const primary = Template.bind({});
+primary.args = {
+  varient: 'primary',
   label: 'Link',
 };
 
-export const grey = Template.bind({});
-grey.args = {
-  label: 'Link',
-};
-
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Link',
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
+export const secondary = Template.bind({});
+secondary.args = {
+  varient: 'secondary',
   label: 'Link',
 };

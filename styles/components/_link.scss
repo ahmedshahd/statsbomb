@@ -1,64 +1,66 @@
 .link {
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  border: 0;
-  cursor: pointer;
   display: inline-flex;
   align-items: flex-start;
   justify-content: space-between;
-  line-height: 1;
+  padding: 5px;
+  width: 223px;
+  height: 53px;
+
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.4;
+  border: 1px solid transparent;
+
   outline: none;
   text-decoration: none;
   text-align: center;
   letter-spacing: -0.38px;
+
+  cursor: pointer;
+
   svg {
     margin-top: 5px;
   }
-}
 
-.link--red {
-  color: white;
-  background: #e40b27;
-  border: 1px solid #e40b27;
-}
-
-.link:hover {
-  background: transparent;
-  color: #e40b27;
-  svg path {
-    stroke: #e40b27;
+  &:hover {
+    background: $color-white;
+    color: $color-primary;
+    border-color:  $color-primary;
+    svg path {
+      stroke: $color-primary;
+    }
   }
 }
 
-.link--grey {
-  background: #f2f2f2;
-  color: #e40b27;
-  border: 1px solid #f2f2f2;
+.link--primary {
+  color: $color-white;
+  background: $color-primary;
+}
+
+.link--secondary {
+  background: $color-secondary;
+  color: $color-primary;
+  border-color:  $color-secondary;
   svg path {
-    stroke: #e40b27;
+    stroke: $color-primary;
   }
 }
 
-.link--grey:hover {
-  border: 1px solid #e40b27;
-  background: white;
-  background-position: top;
-}
+// .link--small {
+//   font-size: 12px;
+//   padding: 10px 16px;
+// }
 
-.link--small {
-  font-size: 12px;
-  padding: 10px 16px;
-}
+// .link--medium {
+//   font-size: 14px;
+//   padding: 11px 20px;
+// }
 
-.link--medium {
-  font-size: 14px;
-  padding: 11px 20px;
-}
-
-.link--large {
-  font-size: 18px;
-  padding: 5px;
-  width: 223px;
-  height: 53px;
-  font-weight: 500;
-}
+// .link--large {
+//   font-size: 18px;
+//   padding: 5px;
+//   width: 223px;
+//   height: 53px;
+//   font-weight: 500;
+// }
