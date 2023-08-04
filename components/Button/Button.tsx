@@ -1,68 +1,34 @@
-import React from 'react';
+import React, { ReactNode, SVGProps } from 'react';
 
 type ButtonProps = {
   /**
-   * Is this the principal call to action on the page?
+   * Button style
    */
-  red?: boolean;
-  /**
-   * Is this the principal call to action on the page?
-   */
-  white?: boolean;
-  /**
-   * Is this the principal call to action on the page?
-   */
-  grey?: boolean;
-  /**
-   * What background color to use
-   */
-  backgroundColor?: string;
-  /**
-   * How large should the button be?
-   */
-  size?: 'small' | 'medium' | 'large';
+  varient: 'primary' | 'secondary' | 'text' | 'icon';
   /**
    * Button contents
    */
-  label?: string;
+  children?: ReactNode;
 
   /**
-   * Button Background
+   *  Icon SVG Component
    */
-  backgroundImage?: string;
-  /**
-   * Optional click handler
-   */
-  onClick?: () => void;
+  icon?: () => React.JSX.Element;
 };
 
 /**
- * Primary UI component for user interaction
+ * Main UI component for user interaction
  */
 export const Button = ({
-  red = false,
-  grey = false,
-  white = false,
-  size = 'medium',
-  backgroundColor,
-  label,
-  backgroundImage,
+  varient = 'text',
+  children,
+  icon: Icon,
   ...props
 }: ButtonProps) => {
-  const mode = white ? 'button--white' : red ? 'button--red' : 'button--grey';
-
-  const buttonClass = backgroundImage
-    ? `button button--${backgroundImage}`
-    : `button button--${size} ${mode}`;
-
   return (
-    <button
-      type="button"
-      className={buttonClass}
-      style={{ backgroundColor }}
-      {...props}
-    >
-      {label}
+    <button type="button" className={`button button--${varient}`} {...props}>
+      {Icon && <Icon />}
+      {children}
     </button>
   );
 };

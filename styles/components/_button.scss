@@ -1,74 +1,49 @@
+$button-color: $color-primary;
+$button-primary-color: $color-primary;
+$button-secondary-color: $color-secondary;
+$button-text-color: $color-white;
+
 .button {
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  display: inline-flex;
+  padding: 12px 28px;
+  border: 1px solid transparent;
+
+  color: $button-color;
+  font-size: 18px;
+  line-height: 1.15;
   font-weight: 700;
-  border: 0;
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
   cursor: pointer;
-  display: inline-block;
-  line-height: 1;
+
+  &:hover {
+    border-color: currentColor;
+  }
 }
 
+.button--primary {
+  color: $color-white;
+  background-color: $button-primary-color;
 
-.button--red {
-  color: #ffff;
-  background: #e40b27;
-  border: 1px solid #e40b27;
+  &:hover {
+    color: $button-primary-color;
+    background-color: transparent;
+  }
 }
 
-.button--red:hover {
-  background: transparent;
-  color: #e40b27;
-  transition: background-position 0.3s;
+.button--secondary {
+  background-color: $button-secondary-color;
+
+  &:hover {
+    background-color: $color-white;
+  }
 }
 
-.button--grey {
-  background: #f2f2f2;
-  color: #e40b27;
-  border: 1px solid #f2f2f2;
-  transition: background-position 0.3s;
+.button--text {
+  background-color: $button-text-color;
 }
 
-.button--grey:hover {
-  border: 1px solid #e40b27;
-  background: #ffff;
-  background-position: top;
-}
-
-
-.button--white {
-  background: #ffffff;
-  color: #e40b27;
-  border: #ffffff
-}
-
-.button--white:hover {
-  border: 1px solid #e40b27;
-}
-
-.button--left-arrow {
-  height: 50px;
-  width: 50px;
-  // background-image: url("../../public/left-arrow.svg")
-  background: no-repeat url('../../public/left-arrow.png');
-}
-
-.button--right-arrow {
-  height: 50px;
-  width: 50px;
-  // background-image: url("../../public/right-arrow.svg")
-  background: no-repeat url('../../public/right-arrow.png');
-}
-
-.button--small {
-  font-size: 12px;
-  padding: 10px 16px;
-}
-
-.button--medium {
-  font-size: 14px;
-  padding: 11px 20px;
-}
-
-.button--large {
-  font-size: 16px;
-  padding: 12px 24px;
+.button--icon {
+  padding: 0;
+  border:0;
 }

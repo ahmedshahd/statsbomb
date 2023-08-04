@@ -1,7 +1,8 @@
 import React from 'react';
 import { StoryFn, Meta } from '@storybook/react';
-
 import { Button } from './Button';
+import RightArrowIcon from '../Icon/Right-Arrow';
+import LeftArrowIcon from '../Icon/Left-Arrow';
 
 export default {
   title: 'Components/Button',
@@ -13,43 +14,35 @@ export default {
 
 const Template: StoryFn<typeof Button> = (args) => <Button {...args} />;
 
-export const red = Template.bind({});
+export const primary = Template.bind({});
 
-red.args = {
-  red: true,
-  label: 'Button',
+primary.args = {
+  varient: 'primary',
+  children: 'Button',
 };
 
-export const grey = Template.bind({});
-grey.args = {
-  grey: true,
-  label: 'Button',
+export const secondary = Template.bind({});
+secondary.args = {
+  varient: 'secondary',
+  children: 'Button',
 };
 
-export const white = Template.bind({});
-white.args = {
-  white: true,
-  label: 'Button',
+export const text = Template.bind({});
+text.args = {
+  varient: 'text',
+  children: 'Button',
 };
 
-export const arrowRight = Template.bind({});
-arrowRight.args = {
-  backgroundImage: 'right-arrow',
+export const rightArrowIcon = Template.bind({});
+rightArrowIcon.args = {
+  varient: 'icon',
+  icon: RightArrowIcon,
 };
 
-export const arrowleft = Template.bind({});
-arrowleft.args = {
-  backgroundImage: 'left-arrow',
+
+export const leftArrowIcon = Template.bind({});
+leftArrowIcon.args = {
+  varient: 'icon',
+  icon: LeftArrowIcon,
 };
 
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  label: 'Button',
-};
