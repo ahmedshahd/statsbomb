@@ -3,6 +3,7 @@ import { StoryFn, Meta } from '@storybook/react';
 import { Button } from './Button';
 import RightArrowIcon from '../Icon/Right-Arrow';
 import LeftArrowIcon from '../Icon/Left-Arrow';
+import { Icon } from '@iconify/react';
 
 export default {
   title: 'Components/Button',
@@ -33,16 +34,8 @@ text.args = {
   children: 'Button',
 };
 
-export const rightArrowIcon = Template.bind({});
-rightArrowIcon.args = {
+export const buttonIcon = Template.bind({});
+buttonIcon.args = {
   varient: 'icon',
-  icon: RightArrowIcon,
+  children: <Icon icon="carbon:arrow-left" />,
 };
-
-
-export const leftArrowIcon = Template.bind({});
-leftArrowIcon.args = {
-  varient: 'icon',
-  icon: LeftArrowIcon,
-};
-

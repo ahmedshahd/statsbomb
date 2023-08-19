@@ -10,10 +10,6 @@ type ButtonProps = {
    */
   children?: ReactNode;
 
-  /**
-   *  Icon SVG Component
-   */
-  icon?: () => React.JSX.Element;
 };
 
 /**
@@ -22,12 +18,10 @@ type ButtonProps = {
 export const Button = ({
   varient = 'text',
   children,
-  icon: Icon,
   ...props
 }: ButtonProps) => {
   return (
     <button type="button" className={`button button--${varient}`} {...props}>
-      {Icon && <Icon />}
       {children}
     </button>
   );
