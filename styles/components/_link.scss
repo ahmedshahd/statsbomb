@@ -18,7 +18,6 @@
     background: $color-white;
     color: $color-primary;
     border-color: currentColor;
-  
   }
 }
 
@@ -41,26 +40,26 @@
 
 .link--text {
   border: 0;
-  width: auto;
-  height: auto;
-  
   .link__icon {
     margin-left: 5px;
     transform: translateX(10px);
   }
 
   &:hover {
+    color: black;
     .link__icon {
+      color: currentColor;
       transform: translateX(15px);
     }
   }
 }
 
 .link--text_highlited {
-  // color: red;
+  color: $color-primary;
   &:hover {
+    color: $color-primary;
     .link__icon {
-      color: currentColor;
+      color: $color-primary;
     }
   }
 }

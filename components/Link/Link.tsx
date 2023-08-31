@@ -28,7 +28,7 @@ export const Link = ({
   isHighlited = false,
   ...props
 }: LinkProps) => {
-  const highlitedClassName = isHighlited ? '.link--text_highlited' : '';
+  const highlitedClassName = isHighlited ? 'link--text_highlited' : '';
   const linkClasses = classNames(
     'link',
     `link--${varient}`,
