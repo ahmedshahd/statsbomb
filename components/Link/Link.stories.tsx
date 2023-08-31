@@ -24,3 +24,16 @@ secondary.args = {
   varient: 'secondary',
   label: 'Link',
 };
+
+export const text = Template.bind({});
+text.args = {
+  varient: 'text',
+  label: 'Link',
+};
+
+export const highlitedText = Template.bind({});
+highlitedText.args = {
+  varient: 'text',
+  label: 'Link',
+  isHighlited: true,
+};

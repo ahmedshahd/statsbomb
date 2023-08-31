@@ -1,8 +1,6 @@
 import React from 'react';
 import { StoryFn, Meta } from '@storybook/react';
 import { Button } from './Button';
-import RightArrowIcon from '../Icon/Right-Arrow';
-import LeftArrowIcon from '../Icon/Left-Arrow';
 import { Icon } from '@iconify/react';
 
 export default {
@@ -18,24 +16,24 @@ const Template: StoryFn<typeof Button> = (args) => <Button {...args} />;
 export const primary = Template.bind({});
 
 primary.args = {
-  varient: 'primary',
+  variant: 'primary',
   children: 'Button',
 };
 
 export const secondary = Template.bind({});
 secondary.args = {
-  varient: 'secondary',
+  variant: 'secondary',
   children: 'Button',
 };
 
 export const text = Template.bind({});
 text.args = {
-  varient: 'text',
+  variant: 'text',
   children: 'Button',
 };
 
 export const buttonIcon = Template.bind({});
 buttonIcon.args = {
-  varient: 'icon',
+  variant: 'icon',
   children: <Icon icon="carbon:arrow-left" />,
 };

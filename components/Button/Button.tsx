@@ -1,28 +1,32 @@
 import React, { ReactNode, SVGProps } from 'react';
+import classNames from 'classnames';
 
 type ButtonProps = {
   /**
    * Button style
    */
-  varient: 'primary' | 'secondary' | 'text' | 'icon';
+  variant: 'primary' | 'secondary' | 'text' | 'icon';
   /**
    * Button contents
    */
+  as: React.ElementType;
+  
   children?: ReactNode;
-
 };
 
 /**
  * Main UI component for user interaction
  */
 export const Button = ({
-  varient = 'text',
+  as: Component = 'button',
+  variant = 'text',
   children,
   ...props
 }: ButtonProps) => {
+  const buttonClassess = classNames(`button`, `button--${variant}`);
   return (
-    <button type="button" className={`button button--${varient}`} {...props}>
+    <Component type="button" className={buttonClassess} {...props}>
       {children}
-    </button>
+    </Component>
   );
 };

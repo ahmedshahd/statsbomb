@@ -1,14 +1,9 @@
 .link {
   display: inline-flex;
-  align-items: flex-start;
   justify-content: space-between;
-  padding: 5px;
-  width: 223px;
-  height: 53px;
+  padding: 10px;
 
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 500;
-  font-size: 18px;
   line-height: 1.4;
   border: 1px solid transparent;
 
@@ -19,18 +14,18 @@
 
   cursor: pointer;
 
-  svg {
-    margin-top: 5px;
-  }
-
   &:hover {
     background: $color-white;
     color: $color-primary;
-    border-color:  $color-primary;
-    svg path {
-      stroke: $color-primary;
-    }
+    border-color: currentColor;
+  
   }
+}
+
+.link__icon {
+  margin-left: 30px;
+  color: currentColor;
+  margin-top: 5px;
 }
 
 .link--primary {
@@ -39,28 +34,33 @@
 }
 
 .link--secondary {
-  background: $color-secondary;
   color: $color-primary;
-  border-color:  $color-secondary;
-  svg path {
-    stroke: $color-primary;
+  background: $color-secondary;
+  border-color: $color-secondary;
+}
+
+.link--text {
+  border: 0;
+  width: auto;
+  height: auto;
+  
+  .link__icon {
+    margin-left: 5px;
+    transform: translateX(10px);
+  }
+
+  &:hover {
+    .link__icon {
+      transform: translateX(15px);
+    }
   }
 }
 
-// .link--small {
-//   font-size: 12px;
-//   padding: 10px 16px;
-// }
-
-// .link--medium {
-//   font-size: 14px;
-//   padding: 11px 20px;
-// }
-
-// .link--large {
-//   font-size: 18px;
-//   padding: 5px;
-//   width: 223px;
-//   height: 53px;
-//   font-weight: 500;
-// }
+.link--text_highlited {
+  // color: red;
+  &:hover {
+    .link__icon {
+      color: currentColor;
+    }
+  }
+}
