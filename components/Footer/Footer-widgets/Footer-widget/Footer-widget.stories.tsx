@@ -1,6 +1,6 @@
 import { StoryFn, Meta } from '@storybook/react';
 import { FooterWidget } from './Footer-widget';
-import { SocialLinks } from '../Social-links';
+import { SocialLinks } from './Social-links/Social-links';
 
 export default {
   title: 'Components/FooterWidget',

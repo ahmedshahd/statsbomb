@@ -2,9 +2,9 @@ import { ReactNode, ElementType } from 'react';
 import classNames from 'classnames';
 
 export type FooterWidgetProps = {
-  as: ElementType;
+  as?: ElementType;
   titles: Array<string>;
-  items: Array<string>;
+  items?: Array<string>;
   children?: ReactNode;
 };
 

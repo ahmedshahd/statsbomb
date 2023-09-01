@@ -15,25 +15,31 @@ const Template: StoryFn<typeof Link> = (args) => <Link {...args} />;
 
 export const primary = Template.bind({});
 primary.args = {
-  varient: 'primary',
+  variant: 'primary',
   label: 'Link',
 };
 
 export const secondary = Template.bind({});
 secondary.args = {
-  varient: 'secondary',
+  variant: 'secondary',
+  label: 'Link',
+};
+
+export const tertiary = Template.bind({});
+tertiary.args = {
+  variant: 'tertiary',
   label: 'Link',
 };
 
 export const text = Template.bind({});
 text.args = {
-  varient: 'text',
+  variant: 'text',
   label: 'Link',
 };
 
 export const highlitedText = Template.bind({});
 highlitedText.args = {
-  varient: 'text',
+  variant: 'text',
   label: 'Link',
   isHighlited: true,
 };

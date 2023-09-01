@@ -3,7 +3,7 @@ import React from 'react';
 import classNames from 'classnames';
 
 type LinkProps = {
-  varient: 'primary' | 'secondary' | 'text';
+  variant: 'primary' | 'secondary' | 'tertiary' | 'text';
 
   label: string;
 
@@ -22,7 +22,7 @@ type LinkProps = {
  */
 export const Link = ({
   as: Component = 'a',
-  varient,
+  variant,
   label,
   isHighlited = false,
   ...props
@@ -30,7 +30,7 @@ export const Link = ({
   const highlitedClassName = isHighlited ? 'link--text_highlited' : '';
   const linkClasses = classNames(
     'link',
-    `link--${varient}`,
+    `link--${variant}`,
     highlitedClassName
   );
 

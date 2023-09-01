@@ -38,6 +38,14 @@
   border-color: $color-secondary;
 }
 
+.link--tertiary {
+  color: $color-primary;
+  background: $color-white;
+  &:hover {
+    background: $color-secondary;
+  }
+}
+
 .link--text {
   border: 0;
   .link__icon {
