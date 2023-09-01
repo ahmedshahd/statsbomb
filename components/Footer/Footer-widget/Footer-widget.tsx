@@ -15,6 +15,7 @@ export const FooterWidget = ({
   as: Component = 'ul',
   titles,
   items,
+  children,
   ...props
 }: FooterWidgetProps) => {
   const FooterWidgetClassess = classNames(`footer-widget`);
@@ -31,6 +32,7 @@ export const FooterWidget = ({
             <a>{item}</a>
           </li>
         ))}
+        {children}
     </Component>
   );
 };
