@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@iconify-json/bi':
+    specifier: ^1.1.18
+    version: 1.1.18
   '@iconify-json/quill':
     specifier: ^1.1.7
     version: 1.1.7
@@ -2766,6 +2769,12 @@ packages:
   /@humanwhocodes/object-schema@1.2.1:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
+
+  /@iconify-json/bi@1.1.18:
+    resolution: {integrity: sha512-nAQd+4Eb2SuYKg/5oa/dlvIudgF5d57VYGkF7P0JbuUipFHk0l2vAQ0CdKYaz0L66PO0rabWDln449lhBE2UJQ==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: false
 
   /@iconify-json/quill@1.1.7:
     resolution: {integrity: sha512-qb4AQZEjGgS5zYPqUjmh7hvgt9c5p9yw5ukzOZAJLmwn/um9544xnz2ArOLmQPVimtCt6G+OnW/1viFQUyJegA==}

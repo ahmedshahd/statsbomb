@@ -11,6 +11,7 @@
     "build-storybook": "storybook build -s ../public"
   },
   "dependencies": {
+    "@iconify-json/bi": "^1.1.18",
     "@iconify-json/quill": "^1.1.7",
     "classnames": "^2.3.2",
     "modern-normalize": "^2.0.0",
