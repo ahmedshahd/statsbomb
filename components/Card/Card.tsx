@@ -23,11 +23,11 @@ type CardProps = {
   /**
    * Card description
    */
-  description: string;
+  description?: string;
   /**
    * Card description Component
    */
-  descriptionComponent: ElementType;
+  descriptionComponent?: ElementType;
   /**
    * Card imageUrl
    */

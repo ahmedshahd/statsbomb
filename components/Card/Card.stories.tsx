@@ -6,7 +6,10 @@ export default {
   title: 'Components/Card',
   component: Card,
   argTypes: {
-    backgroundColor: { control: 'color' },
+    title: { control: 'text' },
+    description: { control: 'text' },
+    imageUrl: { control: 'text' }
+
   },
 } as Meta<typeof Card>;
 
@@ -30,6 +33,17 @@ secondary.args = {
   description:
     'Our data helps soccer and football teams improve their performance, discover new players, and reveal hidden tactics',
   descriptionComponent: 'p',
+  imageUrl:
+    'https://statsbomb.com/wp-content/uploads/2022/02/Roma_Celebrate_1500x1000-min.png',
+};
+
+
+
+export const withoutDescription = Template.bind({});
+withoutDescription.args = {
+  variant: 'secondary',
+  title: 'Teams',
+  titleComponent: 'h4',
   imageUrl:
     'https://statsbomb.com/wp-content/uploads/2022/02/Roma_Celebrate_1500x1000-min.png',
 };
