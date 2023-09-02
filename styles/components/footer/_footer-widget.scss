@@ -1,5 +1,5 @@
 .footer-widget {
-  color: #505050;
+  color: $color-gray;
   font-size: 16px;
 
   padding: 0;
@@ -14,13 +14,14 @@
   margin-bottom: 15px;
 
   &:hover {
-    color: red;
+    color: $color-primary;
   }
 }
 .footer-widget__item {
   margin-bottom: 15px;
   font-weight: normal;
+  
   &:hover {
-    color: red;
+    color: $color-primary
   }
 }

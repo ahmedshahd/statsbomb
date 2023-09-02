@@ -5,6 +5,9 @@ import { SocialLinks } from './Social-links/Social-links';
 export default {
   title: 'Components/FooterWidget',
   component: FooterWidget,
+  argTypes: {
+   
+  },
 } as Meta<typeof FooterWidget>;
 const Template: StoryFn<typeof FooterWidget> = (args) => (
   <FooterWidget {...args} />
