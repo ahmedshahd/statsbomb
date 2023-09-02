@@ -35,5 +35,5 @@ text.args = {
 export const buttonIcon = Template.bind({});
 buttonIcon.args = {
   variant: 'icon',
-  children: <Icon icon="carbon:arrow-left" />,
+  children: <Icon icon="bi:arrow-left" />,
 };

@@ -57,7 +57,7 @@ export const Card = ({
     <Component className={CardClassess} {...props}>
       <header className="card__header">
         <Title>{title}</Title>
-        <Icon icon="carbon:arrow-right" className="card__icon" />
+        <Icon icon="bi:arrow-right" className="card__icon" />
       </header>
       <section className="card__description">
       <Description>{description}</Description>

@@ -37,7 +37,7 @@ export const Link = ({
   return (
     <Component className={linkClasses} {...props}>
       {label}
-      <Icon icon="carbon:arrow-right" className="link__icon" />
+      <Icon icon="bi:arrow-right" className="link__icon" />
     </Component>
   );
 };
